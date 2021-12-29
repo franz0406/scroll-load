@@ -1,0 +1,351 @@
+@import url(./reset.css);
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+/* LAYOUT */
+aside {
+  position: fixed;
+  width: 20%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: #11171c;
+}
+
+aside > div,
+aside > nav {
+  padding: 50px 20px;
+}
+
+section {
+  width: 80%;
+  margin-left: 20%;
+}
+
+/* TYPOGRAPHY */
+body {
+  font: 14px/17px 'Lato', sans-serif;
+  color: #5e5e5e;
+}
+
+/* SCORLL BAR */
+html::-webkit-scrollbar {
+  width: 10px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #11171c;
+  border-radius: 5px;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: #cccccc;
+}
+
+/* ASIDE */
+aside .profile {
+  text-align: center;
+}
+
+aside .profile img {
+  margin-bottom: 25px;
+}
+
+aside .profile h1 {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #fff;
+}
+
+aside .profile h2 {
+  width: 100%;
+  max-width: 190px;
+  margin: 0 auto 20px;
+  color: #fff;
+}
+
+aside .profile ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+aside .profile ul li {
+  margin: 0 5px;
+}
+
+aside .profile ul li a {
+  display: block;
+  width: 24px;
+  background: rgba(255, 255, 255, 0.5);
+  color: #000;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 50%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+aside .profile ul li a:hover {
+  background: white;
+}
+
+aside hr {
+  border: none;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* NAV */
+nav > ul > li {
+  margin-bottom: 20px;
+}
+
+nav > ul > li:nth-of-type(1) > a {
+  color: #d35136;
+}
+
+nav > ul > li:nth-of-type(2) > a {
+  color: #27b599;
+}
+
+nav > ul > li:nth-of-type(3) > a {
+  color: #088ecc;
+}
+
+nav > ul > li > a {
+  margin-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+nav > ul > li > a i {
+  font-size: 18px;
+  width: 30px;
+}
+
+nav > ul > li ul {
+  padding-left: 30px;
+}
+
+nav > ul > li ul li > a {
+  line-height: 24px;
+  color: #424a51;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+nav > ul > li ul li > a:hover {
+  color: #fff;
+}
+
+/* SECTION */
+section figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section figure img {
+  padding: 20px 20px 0;
+  width: 67%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+section figure figcaption {
+  position: relative;
+  padding: 20px 50px 0;
+  width: 33%;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  border-right: 1px solid #e7e7e8;
+  background: #f7f7f7;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+section figure figcaption:after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  top: 0;
+  left: 24px;
+  bottom: 0;
+  background: #e7e7e8;
+}
+
+section figure figcaption:before {
+  content: "";
+  position: absolute;
+  left: 17px;
+  top: 20px;
+  width: 11px;
+  height: 11px;
+  border: 3px solid #f7f7f7;
+  border-radius: 50%;
+  background: #d35136;
+  z-index: 99;
+}
+
+section figure figcaption h2 {
+  color: #11171c;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+section figure figcaption p {
+  margin-bottom: 20px;
+}
+
+section figure figcaption dl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section figure figcaption dl dt {
+  font-weight: bold;
+  padding-right: 5px;
+}
+
+section article:first-of-type > figure > figcaption:after {
+  top: 30px;
+}
+
+section article.loading > figure > figcaption:before {
+  visibility: hidden;
+}
+
+section article.loading {
+  display: none;
+}
+
+section article.loading .icon {
+  width: 67%;
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #a0a2a4;
+}
+
+section article.loading .icon i {
+  font-size: 18px;
+  -webkit-animation: loading 1s linear infinite;
+          animation: loading 1s linear infinite;
+}
+
+section article.loading .icon h3 {
+  margin-left: 14px;
+  font-weight: bold;
+}
+
+#message {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  font-weight: bold;
+  text-align: center;
+  z-index: 9999;
+}
+
+.popup {
+  width: 20%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px 60px;
+}
+
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 950px) {
+  section figure {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section figure img {
+    width: 100%;
+    padding: 20px 20px 20px;
+    background: #f7f7f7;
+  }
+  section figure figcaption {
+    width: 100%;
+    padding: 20px 50px 20px;
+    border-right: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  aside {
+    position: static;
+    width: 100%;
+  }
+  aside nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  aside nav > ul > li {
+    position: relative;
+  }
+  aside nav > ul .sub_menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 25px;
+  }
+  section {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+/*# sourceMappingURL=main.css.map */
